@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            h1{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Book details</h1>
+        
+        <div class="container">
+            <h1>Details </h1>       
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>isbn</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                {% for i in user %}
+                <tbody>
+                    <tr>
+                        {% if i.isbn==name or i.title==name or i.author==name or i.year==name %}
+                        
+                        <th><a href="{{ url_for ('review', id = i.isbn) }}" id="{{i.isbn}}">{{i.isbn}}</a></th>
+                        <th>{{i.title}}</th>
+                        <td>{{i.author}}</td>
+                        <td>{{i.year}}</a></td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+    
+          </div>
+        
+    </body>
+</html>

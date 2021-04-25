@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Title</th>
+               
+            </tr>
+        </thead>
+        {% for i in c %}
+        <tbody>
+            
+            <tr>
+            
+                <th>{{i.user}}</th>
+                <td>{{i.book}}</td>
+                
+            </tr>
+            
+        </tbody>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>

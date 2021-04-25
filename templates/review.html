@@ -1,0 +1,64 @@
+<html>
+    <head>
+<!-- Font Awesome Icon Library -->
+        <style>
+            input[type=text], select{
+                
+                width: 60%;
+                padding: 15px 50px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            
+            }
+            button {
+                width: 60%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #9c9c9c;
+            }
+        </style>
+    
+    </head>
+    <body>
+
+        <h2>Isbn = {{isbn}}</h2>
+        <h2>Title = {{title}}</h2>
+        <h2>Author = {{author}}</h2>
+        <h2>Year = {{year}}</h2>
+      
+        <form action="\review\{{isbn}}\{{title}}" method="post">
+
+            <input type="text" name="nam" placeholder="Enter your name"><br><br>
+            <input type="radio" id="star" name="stars" value="One Star" >
+            <label for="star">One</label>
+            <input type="radio" id="star" name="stars" value="Two Star" >
+            <label for="star">Two</label>
+            <input type="radio" id="star" name="stars" value="Three Star" >
+            <label for="star">Three</label>
+            <input type="radio" id="star" name="stars" value="Four Star" >
+            <label for="star">Four</label>
+            <input type="radio" id="star" name="stars" value="Five Star" >
+            <label for="star">Five</label><br><br>
+            <input type = "text" name="name" placeholder="Review this book"><br><br>
+
+
+            <h1>Do you want to add this book to book shelf</h1>
+            <input type="radio" id="s" name="shelf" value="Yes" >
+            <label for="s">Yes</label>
+            <input type="radio" id="s" name="shelf" value="No" >
+            <label for="s">No</label><br><br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

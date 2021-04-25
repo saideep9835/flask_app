@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    
+                    <th scope="col">Name</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">timestamp</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <th scope="row">1</th>
+                    
+                    <td>{{user.name}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.timestamp}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            
+      
+    </body>
+</html>
